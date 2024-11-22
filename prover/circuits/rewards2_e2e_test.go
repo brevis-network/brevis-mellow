@@ -70,7 +70,7 @@ func TestE2EWholeSetupRewards2Circuit(t *testing.T) {
 	outDir := "$HOME/circuitOut/myBrevisApp"
 	srsDir := "$HOME/kzgsrs"
 
-	compiledCircuit, pk, vk, _, err := sdk.Compile(&MellowRewardsCircuit{}, outDir, srsDir)
+	compiledCircuit, pk, vk, _, err := sdk.Compile(&MellowRewards2Circuit{}, outDir, srsDir)
 	check(err)
 
 	check(err)
@@ -171,12 +171,12 @@ func TestE2EWithProverRewards2Circuit(t *testing.T) {
 	for i := 2; i < NumHolders; i++ {
 		accounts[i] = sdk.ConstUint248(0)
 	}
-	appCircuit := &MellowRewardsCircuit{
+	appCircuit := &MellowRewards2Circuit{
 		Accounts:    accounts,
 		StartBlkNum: sdk.ConstUint32(21230700),
 		EndBlkNum:   sdk.ConstUint32(21231099),
 	}
-	appCircuitAssignment := &MellowRewardsCircuit{
+	appCircuitAssignment := &MellowRewards2Circuit{
 		Accounts:    accounts,
 		StartBlkNum: sdk.ConstUint32(21230700),
 		EndBlkNum:   sdk.ConstUint32(21231099),
