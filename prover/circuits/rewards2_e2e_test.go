@@ -32,7 +32,7 @@ func TestE2EWholeSetupRewards2Circuit(t *testing.T) {
 	err = json.Unmarshal(data, &s)
 	check(err)
 
-	num := 128
+	num := 256
 	accountsSlot := make([]sdk.StorageData, num)
 	var accounts [NumHolders]sdk.Uint248
 	for i, account := range s[num : 32+num] {
@@ -81,7 +81,7 @@ func TestE2EWholeSetupRewards2Circuit(t *testing.T) {
 
 	fmt.Println("Start Prepare Query", time.Now().Unix())
 
-	appContract := common.HexToAddress("0x9fc16c4918a4d69d885f2ea792048f13782a522d")
+	appContract := common.HexToAddress("0xCBa0CF440e383E6C6cc4484904449BAe9dB312F9")
 	refundee := common.HexToAddress("0x1bF81EA1F2F6Afde216cD3210070936401A14Bd4")
 
 	calldata, requestId, nonce, feeValue, err := app.PrepareRequest(vk, witness, 1, 11155111, refundee, appContract, 400000, gwproto.QueryOption_ZK_MODE.Enum(), "MELLOWREWARDS2")
