@@ -74,12 +74,12 @@ func TestCircuit(t *testing.T) {
 	for i := 2; i < NumHolders; i++ {
 		accounts[i] = sdk.ConstUint248(0)
 	}
-	appCircuit := &AppCircuit{
+	appCircuit := &MellowRewardsCircuit{
 		Accounts:    accounts,
 		StartBlkNum: sdk.ConstUint32(21230700),
 		EndBlkNum:   sdk.ConstUint32(21231099),
 	}
-	appCircuitAssignment := &AppCircuit{
+	appCircuitAssignment := &MellowRewardsCircuit{
 		Accounts:    accounts,
 		StartBlkNum: sdk.ConstUint32(21230700),
 		EndBlkNum:   sdk.ConstUint32(21231099),

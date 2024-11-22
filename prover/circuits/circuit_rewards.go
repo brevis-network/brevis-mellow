@@ -14,22 +14,22 @@ const (
 
 var PzETHToken = sdk.ConstUint248("0x8c9532a60E0E7C6BbD2B2c1303F63aCE1c3E9811")
 
-type AppCircuit struct {
+type MellowRewardsCircuit struct {
 	Accounts    [NumHolders]sdk.Uint248 // Holders' addresses
 	StartBlkNum sdk.Uint32              // Start block number
 	EndBlkNum   sdk.Uint32              // End block number
 }
 
-var _ sdk.AppCircuit = &AppCircuit{}
+var _ sdk.AppCircuit = &MellowRewardsCircuit{}
 
-func (c *AppCircuit) Allocate() (maxReceipts, maxStorage, maxTransactions int) {
+func (c *MellowRewardsCircuit) Allocate() (maxReceipts, maxStorage, maxTransactions int) {
 	// Our app is only ever going to use one storage data at a time so
 	// we can simply limit the max number of data for storage to 1 and
 	// 0 for all others
 	return 32, MaxStorage, 0
 }
 
-func (c *AppCircuit) Define(api *sdk.CircuitAPI, in sdk.DataInput) error {
+func (c *MellowRewardsCircuit) Define(api *sdk.CircuitAPI, in sdk.DataInput) error {
 	api.AssertInputsAreUnique()
 	uint32 := api.Uint32
 	uint248 := api.Uint248
@@ -102,8 +102,9 @@ func (c *AppCircuit) Define(api *sdk.CircuitAPI, in sdk.DataInput) error {
 
 	for i, account := range c.Accounts {
 		api.OutputAddress(account)
-		q, _ := uint248.Div(accumulatedResult[i], sdk.ConstUint248(BlockRange*4000))
-		api.OutputUint(248, q)
+		q, _ := uint248.Div(accumulatedResult[i], sdk.ConstUint248(BlockRange*4000*100))
+		// Use fixed usd price 3690.38 for pzETH around c.EndBlkNum
+		api.OutputUint(248, uint248.Mul(q, sdk.ConstUint248(369038)))
 	}
 	return nil
 }

@@ -15,7 +15,7 @@ var port = flag.Uint("port", 33247, "the port to start the service at")
 func main() {
 	flag.Parse()
 
-	proverService, err := prover.NewService(&circuits.AppCircuit{}, prover.ServiceConfig{
+	proverService, err := prover.NewService(&circuits.MellowRewardsCircuit{}, prover.ServiceConfig{
 		SetupDir: "$HOME/circuitOut",
 		SrsDir:   "$HOME/kzgsrs",
 		RpcURL:   "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
