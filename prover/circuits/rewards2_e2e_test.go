@@ -7,6 +7,7 @@ import (
 	"math/big"
 	"os"
 	"testing"
+	"time"
 
 	"github.com/brevis-network/brevis-sdk/sdk"
 	"github.com/brevis-network/brevis-sdk/sdk/proto/gwproto"
@@ -31,10 +32,10 @@ func TestE2EWholeSetupRewards2Circuit(t *testing.T) {
 	err = json.Unmarshal(data, &s)
 	check(err)
 
-	num := 32
+	num := 128
 	accountsSlot := make([]sdk.StorageData, num)
 	var accounts [NumHolders]sdk.Uint248
-	for i, account := range s[0:32] {
+	for i, account := range s[num : 32+num] {
 		slotPreImage := make([]byte, 64)
 		address := hexutil.MustDecode(account.H.Address)
 		copy(slotPreImage[12:32], address)
@@ -73,9 +74,27 @@ func TestE2EWholeSetupRewards2Circuit(t *testing.T) {
 	compiledCircuit, pk, vk, _, err := sdk.Compile(&MellowRewards2Circuit{}, outDir, srsDir)
 	check(err)
 
+	fmt.Println("Start Witness", time.Now().Unix())
 	check(err)
 	witness, publicWitness, err := sdk.NewFullWitness(appCircuitAssignment, circuitInput)
 	check(err)
+
+	fmt.Println("Start Prepare Query", time.Now().Unix())
+
+	appContract := common.HexToAddress("0x9fc16c4918a4d69d885f2ea792048f13782a522d")
+	refundee := common.HexToAddress("0x1bF81EA1F2F6Afde216cD3210070936401A14Bd4")
+
+	calldata, requestId, nonce, feeValue, err := app.PrepareRequest(vk, witness, 1, 11155111, refundee, appContract, 400000, gwproto.QueryOption_ZK_MODE.Enum(), "MELLOWREWARDS2")
+	fmt.Printf("calldata %x\n", calldata)
+	fmt.Printf("feeValue %d\n", feeValue)
+	fmt.Printf("requestId %s\n", requestId)
+	fmt.Printf("nonce %d\n", nonce)
+	check(err)
+
+	fmt.Println("Don't forget to make the transaction that pays the fee by calling Brevis.sendRequest")
+
+	fmt.Println("Start to Prove ", time.Now().Unix())
+
 	proof, err := sdk.Prove(compiledCircuit, pk, witness)
 	check(err)
 
@@ -84,18 +103,12 @@ func TestE2EWholeSetupRewards2Circuit(t *testing.T) {
 	check(err)
 
 	fmt.Println(">> Initiating Brevis request")
-	appContract := common.HexToAddress("0x9fc16c4918a4d69d885f2ea792048f13782a522d")
-	refundee := common.HexToAddress("0x1bF81EA1F2F6Afde216cD3210070936401A14Bd4")
-
-	calldata, requestId, _, feeValue, err := app.PrepareRequest(vk, witness, 1, 11155111, refundee, appContract, 400000, gwproto.QueryOption_ZK_MODE.Enum(), "")
-	fmt.Printf("calldata %x\n", calldata)
-	fmt.Printf("feeValue %d\n", feeValue)
-	fmt.Printf("requestId %s\n", requestId)
-	fmt.Println("Don't forget to make the transaction that pays the fee by calling Brevis.sendRequest")
 	check(err)
 
 	// Submit proof to Brevis
 	fmt.Println(">> Submitting my proof to Brevis")
+	fmt.Println("Start to submit proof ", time.Now().Unix())
+
 	err = app.SubmitProof(proof)
 	check(err)
 
