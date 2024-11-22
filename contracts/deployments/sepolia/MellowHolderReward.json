@@ -1,0 +1,353 @@
+{
+  "address": "0xCBa0CF440e383E6C6cc4484904449BAe9dB312F9",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_brevisRequest",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableInvalidOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableUnauthorizedAccount",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "startBlockNum",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "endBlockNum",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint248",
+          "name": "reward",
+          "type": "uint248"
+        }
+      ],
+      "name": "RewardAttested",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "_appVkHashes",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "_appCircuitOutputs",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "brevisBatchCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_appVkHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_appCircuitOutput",
+          "type": "bytes"
+        }
+      ],
+      "name": "brevisCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "brevisRequest",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_vkHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "deprecateVkHash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "o",
+          "type": "bytes"
+        }
+      ],
+      "name": "mockDecode",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "startBlockNum",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "endBlockNum",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address[]",
+          "name": "accounts",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint248[]",
+          "name": "rewards",
+          "type": "uint248[]"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_vkHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setVkHash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x72f15f70604bd2a5e4db11d26a17749d925eb31f232a89056849b9cfa2bfe1d8",
+  "receipt": {
+    "to": null,
+    "from": "0x58b529F9084D7eAA598EB3477Fe36064C5B7bbC1",
+    "contractAddress": "0xCBa0CF440e383E6C6cc4484904449BAe9dB312F9",
+    "transactionIndex": 25,
+    "gasUsed": "711828",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000802000020000000000000000000800000000000000000000001000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000400000000000000000000000",
+    "blockHash": "0x7ce9ec58ee52ef8b50d28dd6528f448a641f159218935610c52847cd2cfd6d05",
+    "transactionHash": "0x72f15f70604bd2a5e4db11d26a17749d925eb31f232a89056849b9cfa2bfe1d8",
+    "logs": [
+      {
+        "transactionIndex": 25,
+        "blockNumber": 7127589,
+        "transactionHash": "0x72f15f70604bd2a5e4db11d26a17749d925eb31f232a89056849b9cfa2bfe1d8",
+        "address": "0xCBa0CF440e383E6C6cc4484904449BAe9dB312F9",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000058b529f9084d7eaa598eb3477fe36064c5b7bbc1"
+        ],
+        "data": "0x",
+        "logIndex": 51,
+        "blockHash": "0x7ce9ec58ee52ef8b50d28dd6528f448a641f159218935610c52847cd2cfd6d05"
+      }
+    ],
+    "blockNumber": 7127589,
+    "cumulativeGasUsed": "4536363",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xa082F86d9d1660C29cf3f962A31d7D20E367154F"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "764ad63bc855a2d115abf24fc41dbe9d",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_brevisRequest\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"OwnableInvalidOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OwnableUnauthorizedAccount\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"startBlockNum\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"endBlockNum\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint248\",\"name\":\"reward\",\"type\":\"uint248\"}],\"name\":\"RewardAttested\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"_appVkHashes\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes[]\",\"name\":\"_appCircuitOutputs\",\"type\":\"bytes[]\"}],\"name\":\"brevisBatchCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_appVkHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"_appCircuitOutput\",\"type\":\"bytes\"}],\"name\":\"brevisCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"brevisRequest\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_vkHash\",\"type\":\"bytes32\"}],\"name\":\"deprecateVkHash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"o\",\"type\":\"bytes\"}],\"name\":\"mockDecode\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"startBlockNum\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"endBlockNum\",\"type\":\"uint64\"},{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint248[]\",\"name\":\"rewards\",\"type\":\"uint248[]\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_vkHash\",\"type\":\"bytes32\"}],\"name\":\"setVkHash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"OwnableInvalidOwner(address)\":[{\"details\":\"The owner is not a valid owner account. (eg. `address(0)`)\"}],\"OwnableUnauthorizedAccount(address)\":[{\"details\":\"The caller account is not authorized to perform an operation.\"}]},\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MellowHolderReward.sol\":\"MellowHolderReward\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[],\"viaIR\":true},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.20;\\n\\nimport {Context} from \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * The initial owner is set to the address provided by the deployer. This can\\n * later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    /**\\n     * @dev The caller account is not authorized to perform an operation.\\n     */\\n    error OwnableUnauthorizedAccount(address account);\\n\\n    /**\\n     * @dev The owner is not a valid owner account. (eg. `address(0)`)\\n     */\\n    error OwnableInvalidOwner(address owner);\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the address provided by the deployer as the initial owner.\\n     */\\n    constructor(address initialOwner) {\\n        if (initialOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(initialOwner);\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        if (owner() != _msgSender()) {\\n            revert OwnableUnauthorizedAccount(_msgSender());\\n        }\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        if (newOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\"},\"contracts/MellowHolderReward.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.18;\\n\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\n\\nimport \\\"./lib/BrevisAppZkOnly.sol\\\";\\n\\n// Only accept ZK-attested results.\\ncontract MellowHolderReward is BrevisAppZkOnly, Ownable {\\n    event RewardAttested(uint64 startBlockNum, uint64 endBlockNum, address account, uint248 reward);\\n\\n    mapping (bytes32 => bool) vkHashes;\\n\\n    constructor(address _brevisRequest) BrevisAppZkOnly(_brevisRequest) Ownable(msg.sender) {}\\n\\n    // BrevisQuery contract will call our callback once Brevis backend submits the proof.\\n    // This method is called with once the proof is verified.\\n    function handleProofResult(bytes32 _vkHash, bytes calldata _circuitOutput) internal override {\\n        // We need to check if the verifying key that Brevis used to verify the proof\\n        // generated by our circuit is indeed our designated verifying key. This proves\\n        // that the _circuitOutput is authentic\\n        require(vkHashes[_vkHash], \\\"invalid vk\\\");\\n        (uint64 startBlockNum, uint64 endBlockNum, address[] memory accounts, uint248[] memory rewards) = decodeOutput(_circuitOutput);\\n\\n        for (uint256 i = 0; i < accounts.length; i++) {\\n            emit RewardAttested(startBlockNum, endBlockNum, accounts[i], rewards[i]);\\n        }\\n    }\\n\\n\\n    function decodeOutput(bytes calldata o) internal pure returns (uint64 startBlockNum, uint64 endBlockNum, address[] memory accounts, uint248[] memory rewards) {\\n        require(o.length > 16, \\\"invalid output\\\");\\n        startBlockNum = uint64(bytes8(o[0:8]));\\n        endBlockNum = uint64(bytes8(o[8:16]));\\n        require((o.length - 16) % 51 == 0, \\\"invalid account output\\\");\\n        uint256 accountsLength = (o.length - 16) / 51;\\n        accounts = new address[](accountsLength);\\n        rewards = new uint248[](accountsLength);\\n        for (uint256 i = 0; i < accountsLength; i++) {\\n            accounts[i] = address(bytes20(o[16+51*i:36+51*i]));\\n            rewards[i] = uint248(bytes31(o[36+51*i:67+51*i]));\\n        }\\n    }\\n\\n    function setVkHash(bytes32 _vkHash) external onlyOwner {\\n        vkHashes[_vkHash] = true;\\n    }\\n\\n    function deprecateVkHash(bytes32 _vkHash) external onlyOwner {\\n        vkHashes[_vkHash] = false;\\n    }\\n\\n    function mockDecode(bytes calldata o) external pure returns (uint64 startBlockNum, uint64 endBlockNum, address[] memory accounts, uint248[] memory rewards) {\\n        require(o.length > 16, \\\"invalid output\\\");\\n        startBlockNum = uint64(bytes8(o[0:8]));\\n        endBlockNum = uint64(bytes8(o[8:16]));\\n        require((o.length - 16) % 51 == 0, \\\"invalid account output\\\");\\n        uint256 accountsLength = (o.length - 16) / 51;\\n        accounts = new address[](accountsLength);\\n        rewards = new uint248[](accountsLength);\\n        for (uint256 i = 0; i < accountsLength; i++) {\\n            accounts[i] = address(bytes20(o[16+51*i:36+51*i]));\\n            if (accounts[i] == address(0)) {\\n                break;\\n            }\\n            rewards[i] = uint248(bytes31(o[36+51*i:67+51*i]));\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x5283af0e132804f467631a4188aefbe6d41121e22b9e1e594b06e18376419f30\",\"license\":\"MIT\"},\"contracts/lib/BrevisAppZkOnly.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.18;\\n\\n// App that only accepts ZK-attested results.\\nabstract contract BrevisAppZkOnly {\\n    address public brevisRequest;\\n\\n    modifier onlyBrevisRequest() {\\n        require(msg.sender == brevisRequest, \\\"invalid caller\\\");\\n        _;\\n    }\\n\\n    constructor(address _brevisRequest) {\\n        brevisRequest = _brevisRequest;\\n    }\\n\\n    function handleProofResult(bytes32 _vkHash, bytes calldata _appCircuitOutput) internal virtual {\\n        // to be overrided by custom app\\n    }\\n\\n    function brevisCallback(bytes32 _appVkHash, bytes calldata _appCircuitOutput) external onlyBrevisRequest {\\n        handleProofResult(_appVkHash, _appCircuitOutput);\\n    }\\n\\n    function brevisBatchCallback(\\n        bytes32[] calldata _appVkHashes,\\n        bytes[] calldata _appCircuitOutputs\\n    ) external onlyBrevisRequest {\\n        for (uint i = 0; i < _appVkHashes.length; i++) {\\n            handleProofResult(_appVkHashes[i], _appCircuitOutputs[i]);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x87d19d0a3c1544a69a075915b04dd999406664c01566c60c570ef8a4c526faf7\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080346100cb57601f610beb38819003918201601f19168301916001600160401b038311848410176100d0578084926020946040528339810103126100cb57516001600160a01b0390818116908190036100cb57600080546001600160a01b0319908116909217905533156100b257600154903390821617600155604051913391167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0600080a3610b0490816100e78239f35b604051631e4fbdf760e01b815260006004820152602490fd5b600080fd5b634e487b7160e01b600052604160045260246000fdfe608060408181526004908136101561001657600080fd5b600092833560e01c90816338931a31146105c4575080633bca02fc146104e3578063715018a61461047b5780637859f6d91461044857806379d6b6a2146103f65780638da5cb5b146103ce5780638fc17cd41461039e5780639711b89d146101245763f2fde38b1461008757600080fd5b34610120576020366003190112610120578135916001600160a01b039182841680940361011c576100b661064b565b83156101065750506001548273ffffffffffffffffffffffffffffffffffffffff19821617600155167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08380a380f35b51631e4fbdf760e01b8152908101849052602490fd5b8480fd5b8280fd5b50913461039b5760208060031936011261039757823567ffffffffffffffff811161012057610156903690850161061d565b9290601095610166878611610677565b6008968588116103935785811161039357600f19860186811161038057603398979694959392988161019b82809406156106db565b04916101a683610755565b956101b084610755565b98885b858110610274575b5050505050506080875197889782890193803560c01c8a52013560c01c8489015287015282518091528160a08701930190845b8181106102545750505084820360608601528080855193848152019401925b82811061021c57505050500390f35b83517effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff168552869550938101939281019260010161020d565b82516001600160a01b0316855288975093830193918301916001016101ee565b80859d97989a999b9c9d02858104820361036d5780850180861161035a57602482810191828211610348576102d68f86906102c38f876001600160a01b03968d6102bd936106c3565b906107c0565b60601c6102d083836107f1565b526107f1565b51161561033857604392830180931161032757506103148f938f929461030c61030683968f988b61031a9a6106c3565b9061081b565b901c926107f1565b5261079b565b9b9a99979896959b6101b3565b634e487b7160e01b8c52601185528bfd5b5050509b9a99979896959b6101bb565b50634e487b7160e01b8c52601185528bfd5b634e487b7160e01b8b526011845260248bfd5b634e487b7160e01b8a526011835260248afd5b634e487b7160e01b855260118852602485fd5b8380fd5b5080fd5b80fd5b509034610120576020366003190112610120576103b961064b565b35825260026020528120805460ff1916905580f35b8382346103975781600319360112610397576020906001600160a01b03600154169051908152f35b503461012057366003190112610397576024359067ffffffffffffffff821161012057610429610445923690830161061d565b9161043f6001600160a01b038654163314610841565b3561088d565b80f35b5090346101205760203660031901126101205761046361064b565b35825260026020528120805460ff1916600117905580f35b833461039b578060031936011261039b5761049461064b565b806001600160a01b0360015473ffffffffffffffffffffffffffffffffffffffff198116600155167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a380f35b5034610120573660031901126103975767ffffffffffffffff9080358281116103935761051390369083016105e7565b919060249182358581116105c05761052e90369083016105e7565b9390916105466001600160a01b038954163314610841565b875b868110610553578880f35b8060051b90868110156105ae5781850135601e19863603018112156105aa578501918235928a84116105a6576020019280360384136105a6576105a19361059c9289013561088d565b61079b565b610548565b8b80fd5b8a80fd5b634e487b7160e01b8a5260328352838afd5b8680fd5b8490346103975781600319360112610397576001600160a01b0360209254168152f35b9181601f840112156106185782359167ffffffffffffffff8311610618576020808501948460051b01011161061857565b600080fd5b9181601f840112156106185782359167ffffffffffffffff8311610618576020838186019501011161061857565b6001600160a01b0360015416330361065f57565b60405163118cdaa760e01b8152336004820152602490fd5b1561067e57565b60405162461bcd60e51b815260206004820152600e60248201527f696e76616c6964206f75747075740000000000000000000000000000000000006044820152606490fd5b90939293848311610618578411610618578101920390565b156106e257565b60405162461bcd60e51b815260206004820152601660248201527f696e76616c6964206163636f756e74206f7574707574000000000000000000006044820152606490fd5b67ffffffffffffffff811161073f5760051b60200190565b634e487b7160e01b600052604160045260246000fd5b9061075f82610727565b60405190601f1990601f018116820167ffffffffffffffff81118382101761073f576040528382526107918294610727565b0190602036910137565b60001981146107aa5760010190565b634e487b7160e01b600052601160045260246000fd5b6bffffffffffffffffffffffff1990358181169392601481106107e257505050565b60140360031b82901b16169150565b80518210156108055760209160051b010190565b634e487b7160e01b600052603260045260246000fd5b60ff1990358181169392601f811061083257505050565b601f0360031b82901b16169150565b1561084857565b60405162461bcd60e51b815260206004820152600e60248201527f696e76616c69642063616c6c65720000000000000000000000000000000000006044820152606490fd5b92919060009384526020916002835260409060ff828720541615610a8a576010906108b9828211610677565b60089681881161039b57843560c01c97828411610397578581013560c01c93600f198401848111610a76576033816108f482809406156106db565b04916108ff83610755565b9561090984610755565b99865b8581106109b457505050505050505b81518110156109aa57807f55debc0c1033b5967b46018471cd740ee8716ab35b6ee05c4d085bb1bfe4835e60806001600160a01b0361095d6109a595876107f1565b51167effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff610989858b6107f1565b51168851918d8352888c840152898301526060820152a161079b565b61091b565b5050505050509050565b8085028581048203610a6257808501808611610a4e57602482810191828211610a3b576109f5856109ec8f93866102bd918c8c6106c3565b60601c926107f1565b526043928301809311610a295750610314838f92610306610a249695610a1c928a8a6106c3565b8b1c926107f1565b61090c565b634e487b7160e01b8b5260116004528afd5b50634e487b7160e01b8b5260116004528afd5b634e487b7160e01b8a52601160045260248afd5b634e487b7160e01b89526011600452602489fd5b634e487b7160e01b84526011600452602484fd5b815162461bcd60e51b815260048101859052600a60248201527f696e76616c696420766b000000000000000000000000000000000000000000006044820152606490fdfea2646970667358221220b8495f1f440fc2a176a03dc4985130f4ee2635b075b4db1396cc5d8a9ad3408a64736f6c63430008140033",
+  "deployedBytecode": "0x608060408181526004908136101561001657600080fd5b600092833560e01c90816338931a31146105c4575080633bca02fc146104e3578063715018a61461047b5780637859f6d91461044857806379d6b6a2146103f65780638da5cb5b146103ce5780638fc17cd41461039e5780639711b89d146101245763f2fde38b1461008757600080fd5b34610120576020366003190112610120578135916001600160a01b039182841680940361011c576100b661064b565b83156101065750506001548273ffffffffffffffffffffffffffffffffffffffff19821617600155167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08380a380f35b51631e4fbdf760e01b8152908101849052602490fd5b8480fd5b8280fd5b50913461039b5760208060031936011261039757823567ffffffffffffffff811161012057610156903690850161061d565b9290601095610166878611610677565b6008968588116103935785811161039357600f19860186811161038057603398979694959392988161019b82809406156106db565b04916101a683610755565b956101b084610755565b98885b858110610274575b5050505050506080875197889782890193803560c01c8a52013560c01c8489015287015282518091528160a08701930190845b8181106102545750505084820360608601528080855193848152019401925b82811061021c57505050500390f35b83517effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff168552869550938101939281019260010161020d565b82516001600160a01b0316855288975093830193918301916001016101ee565b80859d97989a999b9c9d02858104820361036d5780850180861161035a57602482810191828211610348576102d68f86906102c38f876001600160a01b03968d6102bd936106c3565b906107c0565b60601c6102d083836107f1565b526107f1565b51161561033857604392830180931161032757506103148f938f929461030c61030683968f988b61031a9a6106c3565b9061081b565b901c926107f1565b5261079b565b9b9a99979896959b6101b3565b634e487b7160e01b8c52601185528bfd5b5050509b9a99979896959b6101bb565b50634e487b7160e01b8c52601185528bfd5b634e487b7160e01b8b526011845260248bfd5b634e487b7160e01b8a526011835260248afd5b634e487b7160e01b855260118852602485fd5b8380fd5b5080fd5b80fd5b509034610120576020366003190112610120576103b961064b565b35825260026020528120805460ff1916905580f35b8382346103975781600319360112610397576020906001600160a01b03600154169051908152f35b503461012057366003190112610397576024359067ffffffffffffffff821161012057610429610445923690830161061d565b9161043f6001600160a01b038654163314610841565b3561088d565b80f35b5090346101205760203660031901126101205761046361064b565b35825260026020528120805460ff1916600117905580f35b833461039b578060031936011261039b5761049461064b565b806001600160a01b0360015473ffffffffffffffffffffffffffffffffffffffff198116600155167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a380f35b5034610120573660031901126103975767ffffffffffffffff9080358281116103935761051390369083016105e7565b919060249182358581116105c05761052e90369083016105e7565b9390916105466001600160a01b038954163314610841565b875b868110610553578880f35b8060051b90868110156105ae5781850135601e19863603018112156105aa578501918235928a84116105a6576020019280360384136105a6576105a19361059c9289013561088d565b61079b565b610548565b8b80fd5b8a80fd5b634e487b7160e01b8a5260328352838afd5b8680fd5b8490346103975781600319360112610397576001600160a01b0360209254168152f35b9181601f840112156106185782359167ffffffffffffffff8311610618576020808501948460051b01011161061857565b600080fd5b9181601f840112156106185782359167ffffffffffffffff8311610618576020838186019501011161061857565b6001600160a01b0360015416330361065f57565b60405163118cdaa760e01b8152336004820152602490fd5b1561067e57565b60405162461bcd60e51b815260206004820152600e60248201527f696e76616c6964206f75747075740000000000000000000000000000000000006044820152606490fd5b90939293848311610618578411610618578101920390565b156106e257565b60405162461bcd60e51b815260206004820152601660248201527f696e76616c6964206163636f756e74206f7574707574000000000000000000006044820152606490fd5b67ffffffffffffffff811161073f5760051b60200190565b634e487b7160e01b600052604160045260246000fd5b9061075f82610727565b60405190601f1990601f018116820167ffffffffffffffff81118382101761073f576040528382526107918294610727565b0190602036910137565b60001981146107aa5760010190565b634e487b7160e01b600052601160045260246000fd5b6bffffffffffffffffffffffff1990358181169392601481106107e257505050565b60140360031b82901b16169150565b80518210156108055760209160051b010190565b634e487b7160e01b600052603260045260246000fd5b60ff1990358181169392601f811061083257505050565b601f0360031b82901b16169150565b1561084857565b60405162461bcd60e51b815260206004820152600e60248201527f696e76616c69642063616c6c65720000000000000000000000000000000000006044820152606490fd5b92919060009384526020916002835260409060ff828720541615610a8a576010906108b9828211610677565b60089681881161039b57843560c01c97828411610397578581013560c01c93600f198401848111610a76576033816108f482809406156106db565b04916108ff83610755565b9561090984610755565b99865b8581106109b457505050505050505b81518110156109aa57807f55debc0c1033b5967b46018471cd740ee8716ab35b6ee05c4d085bb1bfe4835e60806001600160a01b0361095d6109a595876107f1565b51167effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff610989858b6107f1565b51168851918d8352888c840152898301526060820152a161079b565b61091b565b5050505050509050565b8085028581048203610a6257808501808611610a4e57602482810191828211610a3b576109f5856109ec8f93866102bd918c8c6106c3565b60601c926107f1565b526043928301809311610a295750610314838f92610306610a249695610a1c928a8a6106c3565b8b1c926107f1565b61090c565b634e487b7160e01b8b5260116004528afd5b50634e487b7160e01b8b5260116004528afd5b634e487b7160e01b8a52601160045260248afd5b634e487b7160e01b89526011600452602489fd5b634e487b7160e01b84526011600452602484fd5b815162461bcd60e51b815260048101859052600a60248201527f696e76616c696420766b000000000000000000000000000000000000000000006044820152606490fdfea2646970667358221220b8495f1f440fc2a176a03dc4985130f4ee2635b075b4db1396cc5d8a9ad3408a64736f6c63430008140033",
+  "devdoc": {
+    "errors": {
+      "OwnableInvalidOwner(address)": [
+        {
+          "details": "The owner is not a valid owner account. (eg. `address(0)`)"
+        }
+      ],
+      "OwnableUnauthorizedAccount(address)": [
+        {
+          "details": "The caller account is not authorized to perform an operation."
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 604,
+        "contract": "contracts/MellowHolderReward.sol:MellowHolderReward",
+        "label": "brevisRequest",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 8,
+        "contract": "contracts/MellowHolderReward.sol:MellowHolderReward",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 199,
+        "contract": "contracts/MellowHolderReward.sol:MellowHolderReward",
+        "label": "vkHashes",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_bytes32,t_bool)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_bytes32,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      }
+    }
+  }
+}
