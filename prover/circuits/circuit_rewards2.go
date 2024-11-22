@@ -53,9 +53,10 @@ func (c *MellowRewards2Circuit) Define(api *sdk.CircuitAPI, in sdk.DataInput) er
 
 	for i, account := range c.Accounts {
 		api.OutputAddress(account)
-		q, _ := uint248.Div(accumulatedResult[i], sdk.ConstUint248(BlockRange*4000*100))
+		usdValue := uint248.Mul(accumulatedResult[i], sdk.ConstUint248(369038))
+		q, _ := uint248.Div(usdValue, sdk.ConstUint248(4000*100))
 		// Use fixed usd price 3690.38 for pzETH around c.EndBlkNum
-		api.OutputUint(248, uint248.Mul(q, sdk.ConstUint248(369038)))
+		api.OutputUint(248, q)
 	}
 	return nil
 }
