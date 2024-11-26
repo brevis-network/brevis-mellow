@@ -18,7 +18,7 @@ func main() {
 	proverService, err := prover.NewService(&circuits.MellowRewardsCircuit{}, prover.ServiceConfig{
 		SetupDir: "$HOME/circuitOut",
 		SrsDir:   "$HOME/kzgsrs",
-		RpcURL:   "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+		RpcURL:   "https://mainnet.infura.io/v3/fe9161bb028d474f908af91b81296eba",
 		ChainId:  1,
 	})
 	if err != nil {

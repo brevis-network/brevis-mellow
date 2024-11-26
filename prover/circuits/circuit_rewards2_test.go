@@ -22,7 +22,7 @@ type HolderInfo struct {
 }
 
 func TestRewards2Circuit(t *testing.T) {
-	rpc := "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+	rpc := "https://mainnet.infura.io/v3/fe9161bb028d474f908af91b81296eba"
 	localDir := "$HOME/circuitOut/myBrevisApp"
 	app, err := sdk.NewBrevisApp(1, rpc, localDir)
 	check(err)
